@@ -35,6 +35,6 @@ class ViewConcertListingTest extends TestCase
     {
         $concert = factory('App\Concert')->states('unpublished')->create();
 
-        $this->get('/concerts/' . $concert->id)->assertStatus(404);
+        $this->get("/concerts/{$concert->id}")->assertStatus(404);
     }
 }

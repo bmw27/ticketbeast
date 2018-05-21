@@ -1,36 +1,12 @@
-/**
- * This injects Tailwind's base styles, which is a combination of
- * Normalize.css and some additional base styles.
- *
- * You can see the styles here:
- * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
- */
-@import "./tailwind-preflight.css";
+@import "tailwindcss/preflight";
 
-/**
- * Global application styles. Only add CSS here that would not make sense in
- * a component.
- */
-@import "./global.css";
+/* Add custom base styles here... */
+@import "./base";
 
-/**
- * Here you would add any of your custom component classes; stuff that you'd
- * want loaded *before* the utilities so that the utilities could still
- * override them.
- *
- * Example:
- *
- * .btn { ... }
- * .form-input { ... }
- *
- * Or if using a preprocessor:
- *
- * @import "components/buttons";
- * @import "components/forms";
- */
+@import "tailwindcss/components";
 
-/**
- * This injects all of Tailwind's utility classes, generated based on your
- * config file.
- */
-@import "./tailwind-utilities.css";
+/* Add custom components here... */
+
+@import "tailwindcss/utilities";
+
+/* Add custom utilities here... */
